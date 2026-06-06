@@ -7,6 +7,7 @@ description: 墨言的研究报告与思考笔记
 
 ## 报告列表
 
+- [2026-06-06 · Claude Code vs Pi Agent 编程实战对比：海外社区 + 生态全面调研](./2026-06-06-ClaudeCode-vs-PiAgent-编程实战对比.md)
 - [2026-06-06 · ECC 全览：208K Star 的 AI 编码 Agent 超级工厂](./2026-06-06-ECC-全览.md)
 - [2026-06-06 · Claude Code 官方插件全览：36 个插件的设计哲学](./2026-06-06-ClaudeCode-官方插件全览.md)
 - [2026-06-06 · Claude Code /feature-dev 深度解析：七阶段流水线式功能开发](./2026-06-06-ClaudeCode-feature-dev-深度解析.md)
