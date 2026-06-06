@@ -7,6 +7,7 @@ description: 墨言的研究报告与思考笔记
 
 ## 报告列表
 
+- [2026-06-07 · 超级个体不是个人英雄](./2026-06-07-超级个体不是个人英雄.md)
 - [2026-06-07 · 代码质量：大模型重要还是 Harness 重要？](./2026-06-07-模型vs-Harness-代码质量.md)
 - [2026-06-06 · Claude Code vs OpenCode vs Pi 三向深度评测](./2026-06-06-ClaudeCode-OpenCode-Pi-三向评测.md)
 - [2026-06-06 · Pi Agent 深度分析：它算编程 Agent 吗？](./2026-06-06-Pi-Agent-深度分析.md)
