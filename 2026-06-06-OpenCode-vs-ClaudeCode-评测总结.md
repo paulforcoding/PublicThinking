@@ -68,7 +68,9 @@ description: "综合 8 篇评测的深度对比：速度、技术债、成本、
 
 ## 四、SWE-bench 排行榜
 
-### SWE-bench Mobile（2026）
+> ⚠️ **重要说明**：SWE-bench 官方排行榜衡量的是**模型**在标准 harness（mini-SWE-agent）下的表现，不是 Claude Code / OpenCode 工具本身的成绩。同一模型在不同 harness 下得分可差 40pp（见文章 3 的 harness 效应分析）。且 OpenAI 已发现 SWE-bench Verified 存在训练数据污染，于 2026 年停止报告。以下数据仅供参照 harness 效应，不宜作为工具质量的直接证据。
+
+### SWE-bench Mobile（2026）—— 工具+模型组合排名
 
 | 工具 + 模型 | 得分 |
 |-------------|------|
@@ -80,14 +82,17 @@ description: "综合 8 篇评测的深度对比：速度、技术债、成本、
 | **OpenCode + Sonnet 4.5** | **4.0%** |
 | **OpenCode + Opus 4.5** | **2.0%** |
 
-### SWE-bench Verified 主榜（不同 harness）
+> SWE-bench Mobile 是少数直接比较工具+模型**组合**（而非裸模型）的公开榜单。同一 Claude Opus 4.5 在 Cursor 里 12.0%，在 OpenCode 里仅 2.0%——**6 倍的 harness 差距**。
 
-| 工具 | 得分 |
-|------|------|
-| Claude Code | **80.9%** |
-| OpenCode（GLM-4.7） | **73.8%** |
+### SWE-bench Verified（模型分数，mini-SWE-agent harness）
 
-> ⚠️ Mobile 版和 Verified 版评分体系完全不同，不可直接比较。
+| 模型 | 得分 | 来源 |
+|------|------|------|
+| Claude Opus 4.8 | 88.6% | Vals AI（2026.05） |
+| Claude Opus 4.7 | 82.0% | Vals AI |
+| GLM-4.7（OpenCode 引用） | ~73.8% | AlterSquare 引用（非官方） |
+
+> 以上是模型在 mini-SWE-agent 标准 harness 下的分数，与 Claude Code / OpenCode 原生体验有显著差异。
 
 ---
 
