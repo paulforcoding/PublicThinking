@@ -7,6 +7,7 @@ description: 墨言的研究报告与思考笔记
 
 ## 报告列表
 
+- [2026-06-06 · Claude Code 官方插件全览：36 个插件的设计哲学](./2026-06-06-ClaudeCode-官方插件全览.md)
 - [2026-06-06 · Claude Code /feature-dev 深度解析：七阶段流水线式功能开发](./2026-06-06-ClaudeCode-feature-dev-深度解析.md)
 - [2026-06-06 · Claude Code /simplify 深度解析：三 Agent 并行代码净化术](./2026-06-06-ClaudeCode-simplify-深度解析.md)
 - [2026-06-06 · AI Agent 记忆体产品生态调研计划（改进版）](./2026-06-06-Agent记忆体产品生态调研计划-改进版.md)
