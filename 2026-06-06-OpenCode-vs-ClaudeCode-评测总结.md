@@ -119,7 +119,62 @@ description: "综合 8 篇评测的深度对比：速度、技术债、成本、
 
 ---
 
-## 六、独有功能对比
+## 六、Harness 哲学：决定一切差异的深层结构
+
+前面所有对比——速度、技术债、LSP、成本——表面看是功能差异，底层是同一条分界线：**harness 如何对待模型**。
+
+### 两种信任模型
+
+| | Claude Code | OpenCode |
+|---|---|---|
+| **对模型的态度** | 模型是神谕——输出值得信任，速度优先 | 模型是工具——输出需要验证，正确性优先 |
+| **设计哲学** | "让最好的模型跑得最快" | "让任何模型都能可靠工作" |
+| **架构隐喻** | Apple：垂直整合，全栈控制 | Linux：模块化，可替换每个组件 |
+| **核心假设** | 只有一个模型系列值得深度优化 | 模型会持续演进，harness 不应绑定任何一个 |
+
+这种哲学分歧解释了为什么同一个 Claude Sonnet 4.5，在 Claude Code 里跑 9 分钟，在 OpenCode 里跑 16 分钟——多出来的 7 分钟不是浪费，是 OpenCode 在做 Claude Code 认为"不需要做"的事。
+
+### 具体展开
+
+**1. 速度 vs 验证**
+
+Claude Code 快 78% 是因为它信任模型的输出。写完代码跑个子集测试，通过就算完。OpenCode 慢是因为它不信任——跑全量测试、检查类型系统（LSP）、验证已有功能未被破坏。
+
+这不是「OpenCode 技术差优化不好」，是刻意的架构选择。Claude Code 的 harness 为速度优化，OpenCode 的 harness 为正确性优化。前者把验证责任外包给人类 code review，后者试图在机器层面先兜住。
+
+**2. 单进程 vs 客户端-服务端**
+
+Claude Code 是 TypeScript 单进程——harness、CLI、模型编排全在一个循环里。好处是零网络延迟，每一次工具调用都极快；代价是**不可分拆**——你不能把模型调用和工具执行部署在不同机器上，也不能单独替换其中一层。
+
+OpenCode 是 Go TUI + Bun/JS 服务端，客户端和服务端分离。每一次工具调用多一跳网络延迟，累积起来就是 78% 的差距。但换来的是：前端可以换成桌面 App、Web UI、甚至另一个 AI Agent 来驱动；服务端可以独立扩展、独立调试。
+
+**3. 一体式优化 vs 可组合性**
+
+这是最根本的差异。Claude Code 的 System Prompt 是 2,896 token 的精密工程产物——每一行都是 Anthropic 针对 Claude 模型行为反复调试的结果。配上 Claude 自家的 MCP 惰性加载（134K→5K token），整个栈的每个环节都为 Claude 校准过。
+
+但这意味着：**换模型就废了**。有 CTO 实测，把 Claude Code 的 `ANTHROPIC_BASE_URL` 指向 OpenRouter、底层模型换成 GLM-5，结果是最差的两头——harness 不是为 GLM-5 设计的，GLM-5 也没针对这个 harness 优化。输出质量断崖式下降。
+
+OpenCode 反过来：System Prompt 是 Markdown 文件，agent 配置是 YAML frontmatter，放在 `.opencode/agents/` 目录下。换个模型只需改一行 `model:` 字段。代价是：任何一个模型的体验都达不到 Claude Code + Claude 的「精调」水平。好处是：你可以为不同任务指定不同模型——plan 用 Sonnet、build 用 GLM-5、QA 用 MiniMax。
+
+**4. 保守 vs 激进**
+
+Claude Code 默认只读，每次写操作弹权限确认。这是一种**人机协作的安全模型**——harness 把最终决定权交给人。
+
+OpenCode 默认允许编辑，靠 Git 快照做 `/undo`。这是一种**自动化信任模型**——harness 相信模型+验证循环能兜住错误，人只在出问题时介入。
+
+两种模型没有绝对优劣。Claude Code 的方式更适合"人在回路中"的交互式编程；OpenCode 的方式更适合后台批量任务和自主 Agent 场景。
+
+### 为什么这个差异比功能对比更重要
+
+功能会趋同。OpenCode 以后可能会有类似 Agent View 的东西，Claude Code 以后可能会加 LSP 反馈。但 harness 对模型的信任姿态，决定了**每一个功能会怎么做**。
+
+Claude Code 的 Agent View 是**中央控制台**——人在顶部俯瞰所有 agent。OpenCode 如果要做一个类似功能，大概率会是**对等网络**——agent 之间互相发现、协商，因为它的架构假设就是多模型、去中心化。
+
+同一个需求，两种哲学给出完全不同的答案。这才是选型时真正要想清楚的问题——不是今天谁功能多，而是**你认同哪种对 AI 编程的理解**。
+
+---
+
+## 七、独有功能对比
 
 | 功能 | OpenCode | Claude Code |
 |------|:--:|:--:|
@@ -140,7 +195,7 @@ description: "综合 8 篇评测的深度对比：速度、技术债、成本、
 
 ---
 
-## 七、关键事件：Anthropic OAuth 封禁（2026.01.09）
+## 八、关键事件：Anthropic OAuth 封禁（2026.01.09）
 
 Anthropic 封禁了 OpenCode 通过消费者 OAuth token 访问 Claude。OpenCode 被迫移除 Claude Pro/Max 支持：
 
@@ -150,7 +205,7 @@ Anthropic 封禁了 OpenCode 通过消费者 OAuth token 访问 Claude。OpenCod
 
 ---
 
-## 八、选型指南
+## 九、选型指南
 
 ### 选 Claude Code 如果：
 
