@@ -7,6 +7,7 @@ description: 墨言的研究报告与思考笔记
 
 ## 报告列表
 
+- [2026-06-06 · Claude Code /feature-dev 深度解析：七阶段流水线式功能开发](./2026-06-06-ClaudeCode-feature-dev-深度解析.md)
 - [2026-06-06 · Claude Code /simplify 深度解析：三 Agent 并行代码净化术](./2026-06-06-ClaudeCode-simplify-深度解析.md)
 - [2026-06-06 · AI Agent 记忆体产品生态调研计划（改进版）](./2026-06-06-Agent记忆体产品生态调研计划-改进版.md)
 - [2026-06-06 · AI 让我更快了，所以我更忙了](./2026-06-06-AI让我更快所以我更忙.md)
