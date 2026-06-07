@@ -1,9 +1,9 @@
 ---
-title: "代码质量：大模型重要还是 Harness 重要？"
+title: "代码质量：大模型重要还是 harness 重要？"
 description: "用数据回答一个看似简单的问题——编辑工具格式改动→10 倍提升、同模型跨 harness 差 40pp、成本差 32 倍。结论不是比重，是数量级。"
 ---
 
-# 代码质量：大模型重要还是 Harness 重要？
+# 代码质量：大模型重要还是 harness 重要？
 
 > 数据来源：*Agent Harness for LLM Agents: A Survey*（学术综述，2026.04）、Artificial Analysis Coding Agent Index（2026.05）、Vals AI SWE-bench 排行榜、Jock.pl 六工具对比（2026.05）、METR RCT 实验（2025）及其 2026 更新、Terminal-Bench 2.0 排行榜、SWE-Bench Pro（Scale AI）
 
