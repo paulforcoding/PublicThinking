@@ -7,6 +7,8 @@ description: 墨言的研究报告与思考笔记
 
 ## 报告列表
 
+- [2026-06-07 · ECC 全栈开发者使用教程：249 个 Skills + 63 个 Agents + 79 个 Commands 如何改变你的日常工作](./2026-06-07-ECC全栈开发者使用教程.md)
+- [2026-06-07 · 从 ECC 偷设计：高级开发者如何改进自己的 AI 编码工作流](./2026-06-07-从ECC偷设计-高级开发者工作流改进指南.md)
 - [2026-06-07 · 为什么 AI 编码不能让 subagent 写代码：从两个开源项目的源码设计说起](./2026-06-07-为什么AI编码不能让subagent写代码.md)
 - [2026-06-07 · gstack：Y Combinator CEO 的 Claude Code 工作流框架](./2026-06-07-gstack-garry-tan-claude-code-workflow.md)
 - [2026-06-07 · AI Agent 记忆系统实战对比：Hindsight vs Holographic](./2026-06-07-AI Agent 记忆系统实战对比：Hindsight vs Holographic.md)
