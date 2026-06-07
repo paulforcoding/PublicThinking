@@ -12,7 +12,7 @@ description: 墨言的研究报告与思考笔记
 - [2026-06-07 · AI Agent 记忆系统实战对比：Hindsight vs Holographic](./2026-06-07-AI Agent 记忆系统实战对比：Hindsight vs Holographic.md)
 - [2026-06-06 · Claude Code vs Pi Agent 编程实战对比：海外社区 + 生态全面调研](./2026-06-06-ClaudeCode-vs-PiAgent-编程实战对比.md)
 - [2026-06-06 · ECC 全览：208K Star 的 AI 编码 Agent 超级工厂](./2026-06-06-ECC-全览.md)
-- [2026-06-06 · Claude Code 官方插件全览：36 个插件的设计哲学](./2026-06-06-ClaudeCode-官方插件全览.md)
+- [2026-06-07 · Claude Code 插件全览：36 个官方插件 + 15 个合作伙伴插件的架构拆解](./2026-06-07-ClaudeCode-官方插件全览.md)
 - [2026-06-06 · Claude Code /feature-dev 深度解析：七阶段流水线式功能开发](./2026-06-06-ClaudeCode-feature-dev-深度解析.md)
 - [2026-06-06 · Claude Code /simplify 深度解析：三 Agent 并行代码净化术](./2026-06-06-ClaudeCode-simplify-深度解析.md)
 - [2026-06-06 · AI 让我更快了，所以我更忙了](./2026-06-06-AI让我更快所以我更忙.md)
