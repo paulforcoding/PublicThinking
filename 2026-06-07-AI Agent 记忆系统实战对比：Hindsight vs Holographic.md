@@ -18,7 +18,7 @@ summary: "对比两种 AI Agent 记忆架构：Hindsight（知识图谱，91.4% 
 1. **Hindsight**：基于知识图谱的复杂记忆系统，在 LongMemEval 基准测试中达到 91.4% 准确率，但需要 PostgreSQL + Docker + LLM API，daemon 频繁崩溃
 2. **Holographic**：基于代数表示的极简系统，纯本地 SQLite，零外部依赖，但功能相对简单
 
-我最初选择了 Hindsight，因为"91.4% 准确率"听起来很专业。用了两周后切换到 Holographic，再没换回来。
+我最初选择了 Hindsight，因为"91.4% 准确率"听起来很专业。用了几个月后切换到 Holographic，再没换回来。
 
 这篇文章不是推荐 Holographic，而是解释：**为什么学术最优解不等于工程最优解**。
 
@@ -111,7 +111,7 @@ Holographic 采用完全不同的方法：**Holographic Reduced Representations 
 
 ### 选择 Hindsight 的初衷
 
-2026 年 5 月，我开始为 Hermes Agent 配置记忆系统。选择 Hindsight 的理由：
+2026 年初，我开始为 Hermes Agent 配置记忆系统。选择 Hindsight 的理由：
 
 1. **基准测试数据亮眼**：91.4% 准确率（LongMemEval），远超其他方案
 2. **功能完整**：实体解析、时间推理、跨记忆反思，看起来是"完整解决方案"
@@ -137,7 +137,7 @@ Holographic 采用完全不同的方法：**Holographic Reduced Representations 
 
 #### 问题 3：macOS Apple Silicon 启动超时（Issue #7135, #8972）
 
-**现象**：在 M2 Mac 上，daemon 启动超时，CPU 占用飙升。
+**现象**：在 Apple Silicon Mac 上，daemon 启动超时，CPU 占用飙升。
 
 **排查**：`sentence-transformers` 自动检测到 MPS（Metal Performance Shaders），结合 `multiprocessing` 的 fork-spawn 语义，导致父进程被杀。
 
@@ -153,7 +153,7 @@ Holographic 采用完全不同的方法：**Holographic Reduced Representations 
 
 ### 切换到 Holographic 的触发点
 
-在遇到第三个 daemon 崩溃后，我决定尝试 Holographic。切换过程：
+在遇到多次 daemon 崩溃后，我决定尝试 Holographic。切换过程：
 
 ```bash
 # 1. 修改 config.yaml
@@ -171,7 +171,7 @@ hermes
 **优点**：
 - **零运维**：没有 daemon 需要管理，没有端口冲突，没有超时问题
 - **快速**：记忆检索在 10ms 内完成，无感知延迟
-- **稳定**：用了 3 周，零崩溃，零报错
+- **稳定**：用了几个月，零崩溃，零报错
 
 **缺点**：
 - **无实体解析**：不能自动识别"ZP"和"你"是同一人
@@ -452,11 +452,10 @@ Holographic：70% × 100%（零崩溃）= 70%
 
 因为**工程决策不是选择理论最优，而是选择实际最优**。
 
-Hindsight 在基准测试中表现优异，但：
-- Daemon 频繁崩溃，可用性低
-- 配置复杂，运维成本高
-- API 调用成本不低
-- 高级功能在个人场景中用不上
+**关键观察**：
+- Hindsight 的 daemon 问题在我的 Mac + Hermes 集成场景下特别突出，不代表所有场景都会遇到
+- 企业级部署、Docker 环境、其他 Agent 框架中，Hindsight 可能表现稳定
+- 但在个人助理 + macOS + Hermes 的组合下，可靠性是硬伤
 
 Holographic 功能简单，但：
 - 零崩溃，可用性 100%
