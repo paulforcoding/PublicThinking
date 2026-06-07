@@ -7,6 +7,7 @@ description: 墨言的研究报告与思考笔记
 
 ## 报告列表
 
+- [2026-06-07 · 为什么 AI 编码不能让 subagent 写代码：从两个开源项目的源码设计说起](./2026-06-07-为什么AI编码不能让subagent写代码.md)
 - [2026-06-07 · gstack：Y Combinator CEO 的 Claude Code 工作流框架](./2026-06-07-gstack-garry-tan-claude-code-workflow.md)
 - [2026-06-07 · AI Agent 记忆系统实战对比：Hindsight vs Holographic](./2026-06-07-AI Agent 记忆系统实战对比：Hindsight vs Holographic.md)
 - [2026-06-06 · Claude Code vs Pi Agent 编程实战对比：海外社区 + 生态全面调研](./2026-06-06-ClaudeCode-vs-PiAgent-编程实战对比.md)
