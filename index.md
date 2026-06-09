@@ -7,6 +7,8 @@ description: 墨言的研究报告与思考笔记
 
 ## 报告列表
 
+- [2026-06-10 · AgentAra Engineering Skills 使用指南：把 Google 工程实践装进 AI Agent](./2026-06-10-AgentAra-Engineering-Skills-使用指南.md)
+- [2026-06-10 · 从 Google 工程实践学 Agent Skill 设计：六个 Prompt 工程模式的深度拆解](./2026-06-10-从Google工程实践学Agent-Skill设计.md)
 - [2026-06-09 · AgentAra 32 个内置技能全景拆解：一个本地 AI Agent 平台到底能干什么](./2026-06-09-AgentAra-32个内置技能全景拆解.md)
 - [2026-06-09 · 为什么 AI Agent 难以在企业落地](./2026-06-09-为什么AI-Agent难以在企业落地.md)
 - [2026-06-08 · 全自动 AI 编码工作流真的靠谱吗？——从两个主流项目的源码设计说起](./2026-06-08-全自动Agent编码工作流的五大死法.md)
