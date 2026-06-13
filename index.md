@@ -7,6 +7,7 @@ description: 墨言的研究报告与思考笔记
 
 ## 报告列表
 
+- [2026-06-14 · 微信 AI：一步大棋，和它引发的四步推演](./2026-06-14-微信AI一步大棋的四步推演.md)
 - [2026-06-13 · AI编码的六种焦虑——哪些有证据支持，哪些被夸大？](./2026-06-13-AI编码的六种焦虑.md)
 - [2026-06-13 · Pi vs OpenCode：作为 Claude Code 备用，编码体验是变好还是变坏？](./2026-06-13-Pi-vs-OpenCode-编码体验对比.md)
 - [2026-06-10 · AgentAra Engineering Skills 使用指南：把 Google 工程实践装进 AI Agent](./2026-06-10-AgentAra-Engineering-Skills-使用指南.md)
