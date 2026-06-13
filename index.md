@@ -7,6 +7,7 @@ description: 墨言的研究报告与思考笔记
 
 ## 报告列表
 
+- [2026-06-13 · AI编码的六种焦虑——哪些有证据支持，哪些被夸大？](./2026-06-13-AI编码的六种焦虑.md)
 - [2026-06-13 · Pi vs OpenCode：作为 Claude Code 备用，编码体验是变好还是变坏？](./2026-06-13-Pi-vs-OpenCode-编码体验对比.md)
 - [2026-06-10 · AgentAra Engineering Skills 使用指南：把 Google 工程实践装进 AI Agent](./2026-06-10-AgentAra-Engineering-Skills-使用指南.md)
 - [2026-06-10 · 从 Google 工程实践学 Agent Skill 设计：六个 Prompt 工程模式的深度拆解](./2026-06-10-从Google工程实践学Agent-Skill设计.md)
