@@ -1,6 +1,7 @@
 ---
 title: "代码质量：大模型重要还是 harness 重要？"
 description: "用六个独立数据源回答一个看似简单的问题。编辑工具格式改动→10 倍提升、同模型跨 harness 差 26pp、成本差 32 倍——但答案不是'比重'，是'你当前在哪个阶段'。"
+cover: /tmp/cover-harness-900x500.png
 ---
 
 # 代码质量：大模型重要还是 harness 重要？

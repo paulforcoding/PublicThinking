@@ -7,6 +7,7 @@ description: 墨言的研究报告与思考笔记
 
 ## 报告列表
 
+- [2026-06-13 · Pi vs OpenCode：作为 Claude Code 备用，编码体验是变好还是变坏？](./2026-06-13-Pi-vs-OpenCode-编码体验对比.md)
 - [2026-06-10 · AgentAra Engineering Skills 使用指南：把 Google 工程实践装进 AI Agent](./2026-06-10-AgentAra-Engineering-Skills-使用指南.md)
 - [2026-06-10 · 从 Google 工程实践学 Agent Skill 设计：六个 Prompt 工程模式的深度拆解](./2026-06-10-从Google工程实践学Agent-Skill设计.md)
 - [2026-06-09 · AgentAra 32 个内置技能全景拆解：一个本地 AI Agent 平台到底能干什么](./2026-06-09-AgentAra-32个内置技能全景拆解.md)
@@ -19,7 +20,6 @@ description: 墨言的研究报告与思考笔记
 - [2026-06-07 · 为什么 AI 编码不能让 subagent 写代码：从两个开源项目的源码设计说起](./2026-06-07-为什么AI编码不能让subagent写代码.md)
 - [2026-06-07 · gstack：Y Combinator CEO 的 Claude Code 工作流框架](./2026-06-07-gstack-garry-tan-claude-code-workflow.md)
 - [2026-06-07 · AI Agent 记忆系统实战对比：Hindsight vs Holographic](./2026-06-07-AI Agent 记忆系统实战对比：Hindsight vs Holographic.md)
-- [2026-06-06 · Claude Code vs Pi Agent 编程实战对比：海外社区 + 生态全面调研](./2026-06-06-ClaudeCode-vs-PiAgent-编程实战对比.md)
 - [2026-06-06 · ECC 全览：208K Star 的 AI 编码 Agent 超级工厂](./2026-06-06-ECC-全览.md)
 - [2026-06-07 · Claude Code 插件全览：36 个官方插件 + 15 个合作伙伴插件的架构拆解](./2026-06-07-ClaudeCode-官方插件全览.md)
 - [2026-06-09 · 跟着 feature-dev 学写自己的编程工作流](./2026-06-09-learn-programming-workflow-from-feature-dev.md)
@@ -28,9 +28,5 @@ description: 墨言的研究报告与思考笔记
 - [2026-06-09 · AI 让我更快了，所以我更忙了（v2 全面考证版）](./2026-06-06-AI让我更快所以我更忙.md)
 - [2026-06-06 · MIRIX vs Hindsight：AI Agent 记忆系统深度对比](./2026-06-06-MIRIX-vs-Hindsight-记忆系统对比.md)
 - [2026-06-06 · 超级个体不是个人英雄](./2026-06-06-超级个体不是个人英雄.md)
-- [2026-06-09 · 代码质量：大模型重要还是 harness 重要？（v2 全面考证版）](./2026-06-09-模型vs-harness-代码质量.md)
-- [2026-06-06 · Claude Code vs OpenCode vs Pi 三向深度评测](./2026-06-06-ClaudeCode-OpenCode-Pi-三向评测.md)
-- [2026-06-06 · Pi Agent 深度分析：它算编程 Agent 吗？](./2026-06-06-Pi-Agent-深度分析.md)
-- [2026-06-06 · OpenCode vs ClaudeCode 深度评测总结](./2026-06-06-OpenCode-vs-ClaudeCode-评测总结.md)
 - [2026-06-04 · CEAD 论文详解：企业智能 Agent 的能力对齐架构](./2026-06-04-CEAD论文详解.md)
 - [2026-06-01 · AI 编码智能体工作流项目全景分析报告](./2026-06-01-AI编码智能体工作流项目全景分析.md)
