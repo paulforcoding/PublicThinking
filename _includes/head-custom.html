@@ -1,7 +1,7 @@
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 <script>
   mermaid.initialize({ 
-    startOnLoad: true,
+    startOnLoad: false,
     theme: 'base',
     themeVariables: {
       primaryColor: '#234',
@@ -28,12 +28,15 @@
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    const mermaidDivs = document.querySelectorAll('code.language-mermaid');
-    mermaidDivs.forEach(function(el) {
-      if (el.parentElement && el.parentElement.tagName === 'PRE') {
-        el.parentElement.classList.add('mermaid');
-        const codeContent = el.textContent;
-        el.parentElement.innerHTML = '<div class="mermaid">' + codeContent + '</div>';
+    var codes = document.querySelectorAll('code.language-mermaid');
+    codes.forEach(function(el) {
+      var pre = el.parentElement;
+      if (pre && pre.tagName === 'PRE') {
+        var codeContent = el.textContent;
+        var div = document.createElement('div');
+        div.className = 'mermaid';
+        div.textContent = codeContent;
+        pre.replaceWith(div);
       }
     });
     mermaid.init(undefined, document.querySelectorAll('.mermaid'));
