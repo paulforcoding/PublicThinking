@@ -2,14 +2,27 @@
 <script>
   mermaid.initialize({ 
     startOnLoad: true,
-    theme: 'dark',
+    theme: 'base',
     themeVariables: {
-      primaryColor: '#1a1a2e',
-      primaryTextColor: '#e0e0e0',
-      primaryBorderColor: '#4a4a6a',
-      lineColor: '#7a7aaa',
-      secondaryColor: '#2a2a4e',
-      tertiaryColor: '#3a3a5e'
+      primaryColor: '#234',
+      primaryTextColor: '#fff',
+      primaryBorderColor: '#7a8a9a',
+      lineColor: '#aab',
+      secondaryColor: '#1a2a3a',
+      tertiaryColor: '#2a3a4a',
+      actorBkg: '#2a3a5a',
+      actorBorder: '#6a8aba',
+      actorTextColor: '#eef',
+      actorLineColor: '#7a8a9a',
+      signalColor: '#cce',
+      signalTextColor: '#fff',
+      labelBoxBkgColor: '#2a3a5a',
+      labelBoxBorderColor: '#6a8aba',
+      labelTextColor: '#eef',
+      loopTextColor: '#dde',
+      noteBorderColor: '#8a9aaa',
+      noteBkgColor: '#3a4a5a',
+      noteTextColor: '#fff'
     }
   });
 </script>
@@ -19,8 +32,6 @@
     mermaidDivs.forEach(function(el) {
       if (el.parentElement && el.parentElement.tagName === 'PRE') {
         el.parentElement.classList.add('mermaid');
-        el.parentElement.removeAttribute('class');
-        el.parentElement.removeAttribute('class');
         const codeContent = el.textContent;
         el.parentElement.innerHTML = '<div class="mermaid">' + codeContent + '</div>';
       }
