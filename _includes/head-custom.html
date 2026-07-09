@@ -2,28 +2,7 @@
 <script>
   mermaid.initialize({ 
     startOnLoad: false,
-    theme: 'base',
-    themeVariables: {
-      primaryColor: '#234',
-      primaryTextColor: '#fff',
-      primaryBorderColor: '#7a8a9a',
-      lineColor: '#aab',
-      secondaryColor: '#1a2a3a',
-      tertiaryColor: '#2a3a4a',
-      actorBkg: '#2a3a5a',
-      actorBorder: '#6a8aba',
-      actorTextColor: '#eef',
-      actorLineColor: '#7a8a9a',
-      signalColor: '#cce',
-      signalTextColor: '#fff',
-      labelBoxBkgColor: '#2a3a5a',
-      labelBoxBorderColor: '#6a8aba',
-      labelTextColor: '#eef',
-      loopTextColor: '#dde',
-      noteBorderColor: '#8a9aaa',
-      noteBkgColor: '#3a4a5a',
-      noteTextColor: '#fff'
-    }
+    theme: 'dark'
   });
 </script>
 <script>
@@ -42,3 +21,18 @@
     mermaid.init(undefined, document.querySelectorAll('.mermaid'));
   });
 </script>
+<style>
+  .mermaid svg text,
+  .mermaid svg .label,
+  .mermaid svg .actor text,
+  .mermaid svg .messageText {
+    fill: #e8e8e8 !important;
+  }
+  .mermaid svg .loopText,
+  .mermaid svg .loopText > text {
+    fill: #d0d0d0 !important;
+  }
+  .mermaid svg .noteText > text {
+    fill: #fff !important;
+  }
+</style>
