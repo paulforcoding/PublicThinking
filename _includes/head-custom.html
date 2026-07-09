@@ -2,7 +2,28 @@
 <script>
   mermaid.initialize({ 
     startOnLoad: false,
-    theme: 'dark'
+    theme: 'default',
+    themeVariables: {
+      primaryColor: '#e1f5fe',
+      primaryTextColor: '#1a1a2e',
+      primaryBorderColor: '#0277bd',
+      lineColor: '#01579b',
+      secondaryColor: '#f3e5f5',
+      tertiaryColor: '#e8eaf6',
+      actorBkg: '#e3f2fd',
+      actorBorder: '#1565c0',
+      actorTextColor: '#0d1b2a',
+      actorLineColor: '#1565c0',
+      signalColor: '#1a237e',
+      signalTextColor: '#0d1b2a',
+      labelBoxBkgColor: '#e3f2fd',
+      labelBoxBorderColor: '#1565c0',
+      labelTextColor: '#0d1b2a',
+      loopTextColor: '#1a237e',
+      noteBorderColor: '#90a4ae',
+      noteBkgColor: '#fff9c4',
+      noteTextColor: '#1a1a2e'
+    }
   });
 </script>
 <script>
@@ -25,14 +46,11 @@
   .mermaid svg text,
   .mermaid svg .label,
   .mermaid svg .actor text,
-  .mermaid svg .messageText {
-    fill: #e8e8e8 !important;
-  }
+  .mermaid svg .messageText,
   .mermaid svg .loopText,
-  .mermaid svg .loopText > text {
-    fill: #d0d0d0 !important;
-  }
+  .mermaid svg .loopText > text,
   .mermaid svg .noteText > text {
-    fill: #fff !important;
+    fill: #1a1a2e !important;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   }
 </style>
