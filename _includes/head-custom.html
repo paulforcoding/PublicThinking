@@ -1,4 +1,30 @@
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 <script>
-  mermaid.initialize({ startOnLoad: true });
+  mermaid.initialize({ 
+    startOnLoad: true,
+    theme: 'dark',
+    themeVariables: {
+      primaryColor: '#1a1a2e',
+      primaryTextColor: '#e0e0e0',
+      primaryBorderColor: '#4a4a6a',
+      lineColor: '#7a7aaa',
+      secondaryColor: '#2a2a4e',
+      tertiaryColor: '#3a3a5e'
+    }
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mermaidDivs = document.querySelectorAll('code.language-mermaid');
+    mermaidDivs.forEach(function(el) {
+      if (el.parentElement && el.parentElement.tagName === 'PRE') {
+        el.parentElement.classList.add('mermaid');
+        el.parentElement.removeAttribute('class');
+        el.parentElement.removeAttribute('class');
+        const codeContent = el.textContent;
+        el.parentElement.innerHTML = '<div class="mermaid">' + codeContent + '</div>';
+      }
+    });
+    mermaid.init(undefined, document.querySelectorAll('.mermaid'));
+  });
 </script>
